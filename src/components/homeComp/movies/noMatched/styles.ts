@@ -3,6 +3,7 @@ import {Typography} from "@mui/material"
 
 export const MainContainer = styled.div`
     width: 100%;
+    margin-top: 5rem;
     display: flex;
     justify-content: center;
 `

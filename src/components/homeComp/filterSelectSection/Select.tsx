@@ -104,7 +104,7 @@ useEffect(() => {
   return (
     <>
       {loading ? (
-        <p>loading...</p>
+        <></>
       ) : (
         <Select onChange={(e) => handleChange(e)} defaultValue={options[0]} styles={customStyles} options={options} />
       )}

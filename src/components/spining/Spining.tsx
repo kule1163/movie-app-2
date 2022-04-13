@@ -6,7 +6,7 @@ import {blue} from "@mui/material/colors"
 const Spining = () => {
     const override = css`
     display: block;
-    margin: 0 auto;
+    margin: 5rem auto;
   `;
   
     return (

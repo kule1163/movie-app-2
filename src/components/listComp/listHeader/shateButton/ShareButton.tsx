@@ -51,7 +51,7 @@ const ShareButton = () => {
     return (
     <>
     {loading ? (
-        <p>loading...</p>
+        <></>
     ) : (
         <MainContainer display={shareButtonToggle}>
         <HeaderContainer>
