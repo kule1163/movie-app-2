@@ -1,4 +1,5 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import { blue } from '@mui/material/colors'
+import React, { useEffect, useRef, useState } from 'react'
 import { useAppDispatch } from '../../../app/hooks'
 import { setFilterButton } from '../../../features/movie/movieSlice'
 import { buttonItems } from '../../../utils/buttonItems'
@@ -24,7 +25,6 @@ const ButtonSection = () => {
         revealRefs.current?.forEach(el => {
             setL(prev => [...prev, el.offsetLeft])
             setW(prev => [...prev, el.offsetWidth])
-    
         })
     }, [])
     
@@ -40,7 +40,7 @@ const ButtonSection = () => {
                 }} 
               key={item.id}
               >
-                  <SingleText>{item.name}</SingleText>
+                  <SingleText style={{color: index === currentIndex ? "white" : `${blue[400]}`}}>{item.name}</SingleText>
               </SingleBox>
               
           ))}

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import SearchBar from './searchbar/SearchBar'
 import { TopMenuContainer, SearchIconOpen, ImageBox, ImageContainer, InSearchBarBox, MainBox, MainContainer, MainContent, MenuContainer, MenuIconBox, MenuItemBox, MenuItemText, OutSearchBarBox, TopMenuBox } from './styles'
 import Logo from "../../assets/logos.svg"
@@ -9,7 +9,6 @@ import { useAppSelector } from '../../app/hooks';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { useDispatch } from 'react-redux'
 import { setSearchToggle, setTopMenuToggle } from '../../features/movie/movieSlice'
-import { blue } from "@mui/material/colors"
 import TopMenu from './topMenu/TopMenu'
 import { useNavigate } from 'react-router-dom'
 import CustomLink from '../CustomLink'
@@ -38,7 +37,7 @@ const Navbar = () => {
     }, [handleWindowResize])
 
     useEffect(() => {
-        if (windowSize > 1200) {
+        if (windowSize > 1100) {
             dispatch(setTopMenuToggle(false))
         }
     })

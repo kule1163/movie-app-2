@@ -54,4 +54,7 @@ export const Line = styled.div<LineProps>`
     left: ${props => `${props.left - 8}px`};
     bottom: 0;
     transition: all ease 1s;
+    @media (max-device-width: 1365px) {
+        display: none;
+    }
 `

@@ -1,6 +1,5 @@
 import React from 'react'
-import { CloseIconBox, MainContainer, Search, SearchBoxBig, SearchContainer, SearchContainerBig, SearchIconBox} from './styles'
-import { AiOutlineSearch } from 'react-icons/ai';
+import { CloseIconBox, MainContainer,SearchBoxBig, SearchContainer, SearchContainerBig} from './styles'
 import { CgCloseR } from 'react-icons/cg';
 import { useAppDispatch, useAppSelector } from '../../../app/hooks';
 import SingleBar from './SingleBar';

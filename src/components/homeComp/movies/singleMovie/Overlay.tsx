@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react'
+import React from 'react'
 import { IconBox, OverlayBox, PlayContainer, SectionContainer } from './styles'
 import { FiPlayCircle } from 'react-icons/fi';
 import { BsBookmark } from 'react-icons/bs';
@@ -8,9 +8,6 @@ import { MovieType } from '../../../../utils/types';
 import axios from 'axios';
 import { Typography } from '@mui/material';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
-import {ListProps} from "../../../../utils/types"
-
-
 
 interface OverlayProps {
     item: MovieType;
@@ -19,8 +16,6 @@ interface OverlayProps {
 }
 const Overlay = ({item, display, saved}: OverlayProps) => {
     
-    
-
     const addMovie = (id:number) => {
         const movie = {media_id: id}
         axios.post("https://api.themoviedb.org/3/list/8168486/add_item?api_key=31af07621087a710376eeeff33ef9885&session_id=1fbbc09376c4e69d6994c63aac6ebd732e3b129e", movie)
@@ -55,8 +50,6 @@ const Overlay = ({item, display, saved}: OverlayProps) => {
             })  
     }
 
-
-    
     return (
     <OverlayBox className='overlay'>
         <SectionContainer>

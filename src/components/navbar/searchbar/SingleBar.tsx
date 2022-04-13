@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import {Search, SearchIconBox} from "./styles"
 import { AiOutlineSearch } from 'react-icons/ai';
 import { useAppDispatch, useAppSelector } from '../../../app/hooks';

@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { ListProps, MovieType } from '../../../../utils/types'
-import { ContentContainer, DetailBox, DetailText, Header, ImageBox, ImageDeviceBox, MainContainer, OverlayContainer } from './styles'
+import { MovieType } from '../../../../utils/types'
+import { ContentContainer, DetailBox, DetailText, Header, ImageBox, ImageDeviceBox, MainContainer } from './styles'
 import DefaultImage from "../../../../assets/defaultPhoto.png"
 import { Genre } from '../../../../utils/types'
 import axios from 'axios';
-import Overlay from './Overlay'
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import { useAppSelector } from '../../../../app/hooks'
 import LazyImage from './LazyImage'
 
 interface SingleMovieProps {
@@ -19,8 +16,6 @@ const SingleMovie = ({ item, display}: SingleMovieProps) => {
 
     const [loading, setLoading] = useState<boolean>(true)
     const [genres, setGenres] = useState<Genre[]>()
-
-
 
     const getMovieGenres = () => {
         setLoading(true)
@@ -36,16 +31,12 @@ const SingleMovie = ({ item, display}: SingleMovieProps) => {
 
     useEffect(() => {
         getMovieGenres()
-
     }, [])
-
-
 
     return (
         <>
             {loading ? (
                 <>
-
                 </>
             ) : (
                 <MainContainer>

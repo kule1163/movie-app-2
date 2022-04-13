@@ -11,7 +11,6 @@ import { setGenre } from '../../../features/movie/movieSlice';
 export const customStyles = {
   option: (provided:any, state:any) => ({
     ...provided,
-    /* borderBottom: '1px dotted pink', */
     boxSize: "border-box",
     color: state.isSelected ? `${blue[400]}` : 'white',
     padding: 5,
@@ -38,7 +37,6 @@ export const customStyles = {
       "&:hover": {
         color: `${blue[400]}`
       }
-      /* return { ...provided, opacity, transition, color }; */
     }
   ),
   menuList: (base:any) => ({
@@ -63,7 +61,7 @@ interface SelectProps {
   typeValue: string;
 }
 
-const SelectComp = ({ type, typeValue}: SelectProps) => {
+const SelectComp = ({typeValue}: SelectProps) => {
   const [genres, setGenres] = useState<Genre[]>([])
   const [loading, setLoading] = useState<boolean>(true)
 

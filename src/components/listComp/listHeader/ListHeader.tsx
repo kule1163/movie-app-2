@@ -1,10 +1,10 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { ListProps } from "../../../utils/types"
-import { ButtonContainer, ContentContainer, Header, IdText, ListByBox, ListByContainer, MainContainer, SingleButton, SortBox, SortItemsContainer, SortItemText } from './styles'
+import { ButtonContainer, ContentContainer, Header, IdText, ListByBox, ListByContainer, MainContainer, SingleButton, SortItemsContainer, SortItemText } from './styles'
 import { FaPowerOff } from 'react-icons/fa';
 import { sortByItems } from '../../../utils/sortByItems';
-import { useAppDispatch, useAppSelector } from '../../../app/hooks';
+import { useAppDispatch} from '../../../app/hooks';
 import { setShareButtonToggle, setSortBy } from '../../../features/movie/movieSlice';
 import { blue } from '@mui/material/colors';
 
